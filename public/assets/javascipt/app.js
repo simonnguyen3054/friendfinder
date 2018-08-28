@@ -26,8 +26,6 @@ $.ajax({
 
   console.log("user id and least number array: ",  findSmallestNum(score_arr));
 
-  
-
 });
 
 function compareArr(prev_score, cur_score) {
