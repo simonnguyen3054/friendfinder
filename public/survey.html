@@ -6,136 +6,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <h1>Friends Finder</h1>
-  <form method="POST" action="/submit">
-    <div class="survey">
-      <div id="question-1">
-        <h3>Question 1</h3>
-        <p>You value family over any other thing in your life.</p>
-        <select name="question_one" id="answers-1">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
 
-      <div id="question-2">
-        <h3>Question 2</h3>
-        <p>You're an achiever. You set goal and don't give up on that goal until you've achieved it.</p>
-        <select name="question_two" id="answers-2">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
+  <div class="container">
 
-      <div id="question-3">
-        <h3>Question 3</h3>
-        <p>You're an introvert.</p>
-        <select name="question_three" id="answers-3">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
+    <form method="POST" action="/submit">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-4">Friends Finder</h1>
+          <div class="user-info">
+            <input class="form-control mb-3" type="text" name="name" id="name" placeholder="Name" required>
+            <input class="form-control" type="text" name="img_url" id="img_url" placeholder="Image URL" required>
+          </div>
+        </div>
       </div>
+      <div class="survey">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div id="question-1">
+              <h3>Question 1</h3>
+              <p>You value family over any other thing in your life.</p>
+              <select name="question_one" id="answers-1" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
 
-      <div id="question-4">
-        <h3>Question 4</h3>
-        <p>Your friends think you're always busy.</p>
-        <select name="question_four" id="answers-4">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
+          <li class="list-group-item">
+            <div id="question-2">
+              <h3>Question 2</h3>
+              <p>You're an achiever. You set goal and don't give up on that goal until you've achieved it.</p>
+              <select name="question_two" id="answers-2" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-3">
+              <h3>Question 3</h3>
+              <p>You're an introvert.</p>
+              <select name="question_three" id="answers-3" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-4">
+              <h3>Question 4</h3>
+              <p>Your friends think you're always busy.</p>
+              <select name="question_four" id="answers-4" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-5">
+              <h3>Question 5</h3>
+              <p>You prefer freedom over materials.</p>
+              <select name="question_five" id="answers-5" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-6">
+              <h3>Question 6</h3>
+              <p>You want to have a family before 30 years old.</p>
+              <select name="question_six" id="answers-6" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-7">
+              <h3>Question 7</h3>
+              <p>You're grateful for what you have.</p>
+              <select name="question_seven" id="answers-7" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-8">
+              <h3>Question 8</h3>
+              <p>You like to go out with friends during daytime than nighttime.</p>
+              <select name="question_eight" id="answers-8" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-9">
+              <h3>Question 9</h3>
+              <p>You think you're smarter than many of your friends.</p>
+              <select name="question_nine" id="answers-9" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+
+          </li>
+
+          <li class="list-group-item">
+            <div id="question-10">
+              <h3>Question 10</h3>
+              <p>You don't take NO as answer.</p>
+              <select name="question_ten" id="answers-10" required>
+                <option value="">Select</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </li>
+        </ul>
       </div>
+      <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
 
-      <div id="question-5">
-        <h3>Question 5</h3>
-        <p>You prefer freedom over materials.</p>
-        <select name="question_five" id="answers-5">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Matched Person</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
-      <div id="question-6">
-        <h3>Question 6</h3>
-        <p>You want to have a family before 30 years old.</p>
-        <select name="question_six" id="answers-6">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
-
-      <div id="question-7">
-        <h3>Question 7</h3>
-        <p>You're grateful for what you have.</p>
-        <select name="question_seven" id="answers-7">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
-
-      <div id="question-8">
-        <h3>Question 8</h3>
-        <p>You like to go out with friends during daytime than nighttime.</p>
-        <select name="question_eight" id="answers-8">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
-
-      <div id="question-9">
-        <h3>Question 9</h3>
-        <p>You think you're smarter than many of your friends.</p>
-        <select name="question_nine" id="answers-9">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-      </div>
-
-      <div id="question-10">
-        <h3>Question 10</h3>
-        <p>You don't take NO as answer.</p>
-        <select name="question_ten" id="answers-10">
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
-    <input id="submit" type="submit" value="Submit">
-  </form>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/javascipt/app.js"></script>
 </body>

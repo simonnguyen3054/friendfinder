@@ -25,10 +25,9 @@ app.use(methodOverride('_method'));
 
 app.get('/results', function(req, res){
 
-  connection.query('SELECT * FROM user_answers', function (error, results, fields) {
+  connection.query('select * from user_answers', function (error, results, fields) {
     if (error) throw error;
-
-    res.json(results);
+     res.json(results);
   });
 
 });
@@ -38,15 +37,16 @@ app.get('/survey', function(req, res){
 });
 
 app.post('/submit', function(req, res){
-	console.log(req.body);
-
 	var query = connection.query(
 	  "INSERT INTO user_answers SET ?",
-	  req.body,
+    req.body,
 	  function(err, response) {
-	    res.redirect('/');
+      if (err) {
+        console.log(err);
+      }
+      // res.redirect('/survey');
 	  }
-	);
+  );
 })
 
 app.listen(3000, function(){
